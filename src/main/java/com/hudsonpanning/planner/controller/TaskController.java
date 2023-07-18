@@ -21,7 +21,8 @@ public class TaskController {
     }
 
     @GetMapping
-    public List<Task> getTasks() {
+    public List<Task> getTasks()
+    {
         return this.taskService.getTasks();
     }
 
@@ -32,7 +33,7 @@ public class TaskController {
 
         this.taskService.addTask(task);
 
-        this.logger.info("TaskController.addTask - Added task", task);
+        this.logger.info("TaskController.addTask - Added task: {}", task);
     }
 
     @DeleteMapping
